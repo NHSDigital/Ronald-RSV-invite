@@ -122,7 +122,7 @@
         {% endif %}
 
         {% if "Unread" in data['message-status'] and data['message2read'] === "false" or data['message-status'] == "" or "Read" in data['message-status'] and data['message2read'] === "true" %}
-        {% if "Range Surgery" in data['message-sender'] or data['message-sender'] == "" %}
+        {% if "NHS RSV notification" in data['message-sender'] or data['message-sender'] == "" %}
         <!-- MESSAGE 2 -->
         <li class="nhsapp-card">
           <div class="nhsapp-card__container nhsuk-u-margin-left-6">
@@ -144,7 +144,7 @@
                 <a href="#2" onclick="document.getElementById('message2').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
                   {% if data['message2read'] === "true" %}
                   <span class="nhsuk-u-visually-hidden">Read message from </span>
-                    Range surgery
+                    NHS RSV notification
                   {% else %}
                     <span class="nhsapp-badge-small nhsapp-badge-small--absolute">
                       <span class="nhsapp-badge-small__indicator" aria-hidden="true"></span>
