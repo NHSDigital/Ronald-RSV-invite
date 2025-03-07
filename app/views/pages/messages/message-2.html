@@ -1,50 +1,51 @@
-{% extends 'layout-app.html' %}
-
-{% set hub = "Messages" %}
-
-{% set backLink = true %}
-{% set backLinkURL = "/pages/messages/your-messages" %}
-
-{% set pageHeading = "NHS RSV notification" %}
-{% set pageDescription = "Received 4 October 2023 at 6:30pm" %}
-
-{% block content %}
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-      <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSmall: true,
-        titleHiddenTextBefore: "Message from",
-        description: pageDescription,
-        descriptionMuted: true
-      })}}
-
-        <p>We’re inviting you to get your free NHS respiratory syncytial virus (RSV) vaccine because you’re <b>aged 75 to 79 years</b> (or recently turned 80).</p>
-      
-        <p class="section-title">Why the NHS is offering you RSV vaccination</p>
-
-       <p><RSV is a common respiratory virus that affects the lungs. Symptoms include a cough, sore throat and cold. Most people get better on their own, but older people are at increased risk of serious illness.</p>
-
-        <p>Every year, thousands of people in your age group need hospital care for RSV infection. RSV can make it difficult to breathe and can lead to severe problems like pneumonia. In some cases, it can be life-threatening.</p>
-
-        <p>Every year, thousands of people in your age group need hospital care for RSV infection. RSV can make it difficult to breathe and can lead to severe problems like pneumonia. In some cases, it can be life-threatening.</p>
-        
-         <p class="section-title">How to book your RSV vaccination</p>
-
-         <p>To get your RSV vaccine at a community pharmacy now:</p>
-         <ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSV Vaccination Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        strong.section-title {
+            display: block;
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p><strong>We’re inviting you to get your free NHS respiratory syncytial virus (RSV) vaccine because you’re aged 75 to 79 years (or recently turned 80).</strong></p>
+    
+    <h1>Why the NHS is offering you RSV vaccination</h1>
+    
+    <p>RSV is a common respiratory virus that affects the lungs. Symptoms include a cough, sore throat and cold. Most people get better on their own, but older people are at increased risk of serious illness.</p>
+    
+    <p>Every year, thousands of people in your age group need hospital care for RSV infection. RSV can make it difficult to breathe and can lead to severe problems like pneumonia. In some cases, it can be life-threatening.</p>
+    
+    <strong class="section-title">How to book your RSV vaccination</strong>
+    
+    <p>To get your RSV vaccine at a community pharmacy now:</p>
+    <ul>
         <li>Book a pharmacy appointment</li>
         <li>Find a pharmacy walk-in service</li>
     </ul>
-
-    <p>Or you can attend your GP surgery when they offer you an appointment.</p>
-
-<p>It’s more effective to have your RSV vaccination on a different day to your flu and COVID-19 vaccinations.</p>
     
-    <p class="section-title">More information</p>
+    <p>Or you can attend your GP surgery when they offer you an appointment.</p>
+    
+    <p>It’s more effective to have your RSV vaccination on a different day to your flu and COVID-19 vaccinations.</p>
+    
+    <strong class="section-title">More information</strong>
     
     <p>You only need 1 dose of the RSV vaccine for good, long-term protection. If you have already booked or had your RSV vaccination, you do not need to do anything else.</p>
     
@@ -55,6 +56,4 @@
     <p><strong>NHS England Vaccination Team</strong></p>
 </body>
 </html>
- 
 
-  {% endblock %}
