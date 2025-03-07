@@ -38,53 +38,7 @@
 
       <p class="nhsuk-u-secondary-text-color">If you need to change your reply, you'll need to contact Range Surgery.</p>
 
-      {% else %}
-
-      <!-- WHEN THE BUTTON IS CLICKED ON, THE HIDDEN CONTENT - SELECT YOUR REPLY WILL SHOW -->
-      <!-- THE JAVASCRIPT AT THE BOTTOM OF THIS PAGE MAKES THAT HAPPEN -->
-      <a id="showButton" class="nhsuk-button nhsapp-button" data-module="nhsuk-button" href="#" draggable="false" role="button">
-        Reply to this message
-      </a>
-
-      <!-- HIDDEN CONTENT - SELECT YOUR REPLY -->
-      <form id="hiddenDiv" tabindex="0" style="display:none" method="post" action="/pages/messages/message-sending">
-
-        <input type="hidden" name="replySent" value="true">
-        <input type="hidden" name="replySentFocus" value="true">
-
-        {{ radios({
-          "idPrefix": "message-reply",
-          "name": "message-reply",
-          "fieldset": {
-            "legend": {
-              "text": "Select your reply",
-              "classes": "nhsuk-fieldset__legend--m"
-            }
-          },
-          "items": [
-            {
-              "value": "SMOKE",
-              "text": "SMOKE"
-            },
-            {
-              "value": "EX",
-              "text": "EX"
-            },
-            {
-              "value": "NEVER",
-              "text": "NEVER"
-            }
-          ]
-        }) }}
-
-        <button class="nhsuk-button nhsapp-button" data-module="nhsuk-button" type="submit">
-          Send
-        </button>
-
-      </form>
-
-      {% endif %}
-
+    
     </div>
   </div>
 
